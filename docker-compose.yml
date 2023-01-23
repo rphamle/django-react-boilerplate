@@ -17,6 +17,11 @@ services:
 
   result:
     image: "redis:alpine"
+    # needed for local, not sure if for production
+    ports:
+      - "6379:6379"
+    expose:
+      - "6379"
 
   frontend:
     build:
@@ -49,12 +54,14 @@ services:
       context: .
     command: python manage.py celery
     volumes:
-      - ./backend/:/home/user/app/
+      - ./backend/:/home/user/app/backend/
     env_file: backend/.env
     depends_on:
       - db
       - broker
       - result
+    links:
+      - result # links this container to "result" container
 
   mailhog: # service for faking a SMTP server
     image: mailhog/mailhog

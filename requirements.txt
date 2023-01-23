@@ -4,8 +4,6 @@
 #
 #    pip-compile requirements.in
 #
---extra-index-url https://nexus3.sqcorp.co/repository/pypi-square-general/simple
---trusted-host nexus3.sqcorp.co
 
 amqp==5.1.1
     # via kombu
@@ -110,6 +108,8 @@ psutil==5.9.4
     # via -r requirements.in
 psycopg2==2.9.5
     # via -r requirements.in
+psycopg2-binary==2.9.5
+    # via -r requirements.in
 ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
@@ -129,7 +129,7 @@ pytz==2022.7
     #   djangorestframework
 pyyaml==6.0
     # via tablib
-redis==4.4.1
+redis==4.4.2
     # via
     #   celery
     #   celery-redbeat
@@ -152,7 +152,7 @@ traitlets==5.8.1
     # via
     #   ipython
     #   matplotlib-inline
-urllib3==1.26.13
+urllib3==1.26.14
     # via sentry-sdk
 vine==5.0.0
     # via

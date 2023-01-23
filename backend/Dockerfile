@@ -16,13 +16,11 @@ RUN pip-compile requirements.in > requirements.txt && \
 
 RUN pip install -r requirements.txt && \
     pip install -r dev-requirements.txt  && \
-    pip install psycopg2-binary
+    pip install psycopg2-binary==2.9.5
 
 # Clean the house
 RUN apt-get purge libpq-dev -y && apt-get autoremove -y && \
     rm /var/lib/apt/lists/* rm -rf /var/cache/apt/*
-
-ADD backend/ /home/user/app/backend
 
 USER user
 CMD gunicorn {{project_name}}.wsgi --log-file - -b 0.0.0.0:8000 --reload

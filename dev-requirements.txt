@@ -4,8 +4,6 @@
 #
 #    pip-compile dev-requirements.in
 #
---extra-index-url https://nexus3.sqcorp.co/repository/pypi-square-general/simple
---trusted-host nexus3.sqcorp.co
 
 asgiref==3.6.0
     # via django
@@ -58,7 +56,7 @@ gitpython==3.1.30
     # via
     #   bandit
     #   prospector
-identify==2.5.12
+identify==2.5.13
     # via pre-commit
 idna==3.4
     # via requests
@@ -87,7 +85,7 @@ packaging==21.3
     #   safety
 pathspec==0.10.3
     # via black
-pbr==5.11.0
+pbr==5.11.1
     # via stevedore
 pep8-naming==0.10.0
     # via prospector
@@ -179,7 +177,7 @@ typing-extensions==4.4.0
     #   astroid
     #   black
     #   pylint
-urllib3==1.26.13
+urllib3==1.26.14
     # via requests
 virtualenv==20.17.1
     # via pre-commit
