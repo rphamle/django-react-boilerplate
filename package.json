@@ -15,7 +15,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "@babel/cli": "~7.13.10",
+    "@babel/cli": "^7.12.1",
     "@babel/polyfill": "~7.8.3",
     "@babel/preset-env": "~7.13.10",
     "@babel/preset-react": "~7.12.13",
@@ -34,10 +34,10 @@
     "history": "~4.10.1",
     "imports-loader": "~0.8.0",
     "lodash": "~4.17.21",
-    "marked": "~2.0.1",
+    "marked": "^4.2.5",
     "node-sass": "~8.0.0",
     "postcss": "~8.2.8",
-    "postcss-loader": "~2.1.6",
+    "postcss-loader": "^7.0.2",
     "prop-types": "~15.7.2",
     "react": "~16.14.0",
     "react-bootstrap": "~1.5.2",
@@ -55,7 +55,7 @@
     "url-loader": "~4.1.1",
     "webpack": "~5.75.0",
     "webpack-bundle-tracker": "~1.0.0",
-    "webpack-dev-server": "~3.11.2",
+    "webpack-dev-server": "^4.11.1",
     "whatwg-fetch": "~3.6.2"
   },
   "devDependencies": {
