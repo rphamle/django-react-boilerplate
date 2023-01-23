@@ -18,6 +18,7 @@ baseConfig.entry = [
 ];
 
 baseConfig.optimization = {
+  moduleIds: 'named',
   splitChunks: {
     chunks: 'all',
   },
@@ -37,7 +38,14 @@ baseConfig.module.rules.push(
   },
   {
     test: /\.(woff(2)?|eot|ttf)(\?v=\d+\.\d+\.\d+)?$/,
-    loader: 'url-loader?limit=100000',
+    use: [
+      {
+          loader: 'url-loader',
+          options: {
+              limit: 100000,
+          }
+      }
+    ],
   }
 );
 
@@ -45,7 +53,6 @@ baseConfig.plugins = [
   new webpack.EvalSourceMapDevToolPlugin({
     exclude: /node_modules/
   }),
-  new webpack.NamedModulesPlugin(),
   new webpack.NoEmitOnErrorsPlugin(), // don't reload if there is an error
   new BundleTracker({
     filename: './webpack-stats.json',
