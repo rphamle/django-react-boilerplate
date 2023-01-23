@@ -24,7 +24,6 @@ upgrade: ## update the *requirements.txt files with the latest packages satisfyi
 
 compile_install_requirements:
 	@echo 'Installing pip-tools...'
-	export PIP_REQUIRE_VIRTUALENV=true; \
 	pip install pip-tools
 	@echo 'Compiling requirements...'
 	pip-compile requirements.in > requirements.txt
