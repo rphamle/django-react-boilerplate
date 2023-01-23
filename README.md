@@ -27,13 +27,13 @@ This is a good starting point for modern Python/JavaScript web projects.
 - [ ] Make sure you have Python 3.8 installed
 - [ ] Install Django with `pip install django`, to have the `django-admin` command available.
 - [ ] Open the command line and go to the directory you want to start your project in.
-- [ ] Start your project using:
+- [ ] Start your project using (TODO: I need to find out how to publish boilerplate-release.zip):
     ```
-    django-admin startproject theprojectname --extension py,yml,json --name Procfile,Dockerfile,README.md,.env.example,.gitignore,Makefile --template=https://github.com/vintasoftware/django-react-boilerplate/archive/boilerplate-release.zip
+    django-admin startproject theprojectname --extension py,yml,json --name Procfile,README.md,.env.example,Dockerfile,.env,.env.local_docker,.env.local_nodocker,.pre-commit-config.yaml,.gitignore,Makefile --template=https://github.com/rphamle/django-react-boilerplate/archive/boilerplate-release.zip
     ```
     Alternatively, you may start the project in the current directory by placing a `.` right after the project name, using the following command:
     ```
-    django-admin startproject theprojectname . --extension py,yml,json --name Procfile,Dockerfile,README.md,.env.example,.gitignore,Makefile --template=https://github.com/vintasoftware/django-react-boilerplate/archive/boilerplate-release.zip
+    django-admin startproject theprojectname . --name Procfile,README.md,.env.example,Dockerfile,.env,.env.local_docker,.env.local_nodocker,.pre-commit-config.yaml,.gitignore,Makefile --template=https://github.com/rphamle/django-react-boilerplate/archive/boilerplate-release.zip
     ```
 In the next steps, always remember to replace theprojectname with your project's name
 - [ ] Above: don't forget the `--extension` and `--name` params!

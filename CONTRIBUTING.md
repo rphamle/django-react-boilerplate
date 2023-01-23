@@ -13,9 +13,9 @@ If you made changes to this boilerplate and want to test them, do as follows:
 - [Make sure you have pre-commit installed](https://github.com/vintasoftware/django-react-boilerplate#pre-commit-hooks)
 - Commit your changes
 - Run `git archive -o boilerplate.zip HEAD` to create the template zip file
-- Run the following:
+- Create a new directory somewhere and run the following:
   ```bash
-  cd .. && django-admin startproject theprojectname --extension py,yml,json --name Procfile,README.md,.env.example,Dockerfile --template=django-react-boilerplate/boilerplate.zip
+ django-admin startproject theprojectname . --extension py,yml,json --name Procfile,README.md,.env.example,Dockerfile,.env,.env.local_docker,.env.local_nodocker,.pre-commit-config.yaml,.gitignore,Makefile --template=/path/to/boilerplate.zip
   ```
 - A new folder called `theprojectname` will be created and now you can test your changes
 - Make sure that the project is still running fine with and without docker
